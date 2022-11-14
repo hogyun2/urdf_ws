@@ -2,6 +2,38 @@
 <robot name="omo_r1" xmlns:xacro="http://ros.org/wiki/xacro">
 	<xacro:include filename="$(find ex_urdf)/urdf/common_properties.xacro"/>
 
+  <!-- Init color -->  
+  <material name="black">
+      <color rgba="0.0 0.0 0.0 1.0"/>
+  </material>
+
+  <material name="dark">
+    <color rgba="0.3 0.3 0.3 1.0"/>
+  </material>
+  <material name="light_black">
+    <color rgba="0.4 0.4 0.4 1.0"/>
+  </material>
+
+  <material name="blue">
+    <color rgba="0.0 0.0 0.8 1.0"/>
+  </material>
+
+  <material name="green">
+    <color rgba="0.0 0.8 0.0 1.0"/>
+  </material>
+
+  <material name="grey">
+    <color rgba="0.5 0.5 0.5 1.0"/>
+  </material>
+
+  <material name="red">
+    <color rgba="0.8 0.0 0.0 1.0"/>
+  </material>
+
+  <material name="white">
+    <color rgba="1.0 1.0 1.0 1.0"/>
+  </material>
+  
   <link name="base_footprint"/>
 
   <joint name="base_joint" type="fixed">
@@ -16,7 +48,7 @@
       <geometry>
         <mesh filename="package://ex_urdf/meshes/omo_r1_body.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="light_dark"/>
+      <material name="light_black"/>
 
     </visual>
 
